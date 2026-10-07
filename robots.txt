@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shabusiness.github.io/sitemap.xml
+Sitemap: https://foundingmyth.com/sitemap.xml
