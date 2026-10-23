@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahbano Imran | Product Lead &amp; Designer</title>
+  <meta name="description" content="Founding product lead and designer. Apollos, Zepto, LocalOn.">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cal+Sans&amp;family=Libre+Baskerville:ital@1&amp;family=DM+Sans:wght@400;500;600;800&amp;family=Caveat:wght@600&amp;display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #EEEAE4; font-family: 'DM Sans', system-ui, sans-serif; color: #3A2420; }
+    h1, h2, h3 { font-family: 'Cal Sans', system-ui, sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.015em; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid #3A2420; outline-offset: 3px; border-radius: 999px; }
+    .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin: 0; }
+    .wrap { max-width: 1120px; margin: 0 auto; width: 100%; }
+    .anchor { display: block; position: relative; top: -120px; height: 0; visibility: hidden; }
+    .band { width: 100%; padding: 0 clamp(20px,5vw,48px) clamp(40px,6vw,64px); }
+    .band > .wrap { border-top: 1px solid rgba(58,36,32,.14); padding-top: clamp(36px,5vw,56px); }
+    .pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; min-height: 44px; border-radius: 999px; font-weight: 600; font-size: 16px; transition: background .15s ease, color .15s ease; }
+    .pill-soft { background: #E2DAD0; }
+    .pill-soft:hover { background: #C61E34; color: #FFFFFF; }
+    .pill-dark { background: #3A2420; color: #F4EEEC; }
+    .pill-dark:hover { background: #C61E34; color: #FFFFFF; }
+    .jump { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #C61E34; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; transition: color .15s ease; }
+    .jump:hover { color: #9E1729; }
+    .jump svg { transition: transform .15s ease; }
+    .jump:hover svg { transform: translateY(2px); }
+    .inline-link { color: #C61E34; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .hero-band { padding: clamp(24px,3vw,40px) clamp(20px,5vw,48px) clamp(36px,5vw,56px); }
+    .hero-card { background: #E6E0D8; border-radius: 28px; padding: clamp(28px,4vw,52px); display: flex; align-items: center; gap: clamp(24px,4vw,48px); flex-wrap: wrap; text-align: left; }
+    .fw { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 10px 12px; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(58,36,32,.18); }
+    .fw .eyebrow { flex-basis: 100%; margin-bottom: 2px; }
+    .fw .jump { background: #EEEAE4; color: #3A2420; text-decoration: none; font-size: 15px; padding: 0 18px; min-height: 44px; border-radius: 999px; }
+    .fw .jump:hover { background: #C61E34; color: #FFFFFF; }
+    .bullets { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-direction: column; gap: 14px; }
+    .bullets li { display: flex; align-items: flex-start; font-size: 15px; line-height: 1.4; white-space: nowrap; }
+    .bullets .ico { width: 28px; height: 1.4em; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; }
+    .bullets .ico svg, .bullets .ico img { width: 18px; height: 18px; display: block; }
+    .bullets .txt { min-width: 0; }
+    @media (max-width: 560px) { .bullets li { white-space: normal; } }
+    .navlink { font-size: 14px; font-weight: 600; }
+    .navlink:hover { color: #C61E34; }
+    .hero-title { text-wrap: balance; }
+    .meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 14px 0 0; font-size: 15px; }
+    .meta strong { font-weight: 800; letter-spacing: 0.01em; }
+    .meta .sep { width: 5px; height: 5px; border-radius: 999px; background: #C61E34; align-self: center; flex-shrink: 0; }
+    .facts { display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px; margin: 28px 0 36px; }
+    .facts .fact { flex: 0 1 auto; max-width: 100%; background: #E6E0D8; border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .facts .fact-link { background: #3A2420; color: #F4EEEC; transition: background .15s ease, color .15s ease; }
+    .facts .fact-link:hover { background: #C61E34; color: #FFFFFF; }
+    .facts .fact-link .lbl { opacity: .78; }
+    .facts .fact-link .val { display: flex; align-items: center; gap: 9px; }
+    .facts .fact .lbl { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; opacity: .72; }
+    .facts .fact .val { font-family: 'Cal Sans', system-ui, sans-serif; font-size: clamp(19px,1.9vw,23px); line-height: 1.2; letter-spacing: -0.015em; margin-top: auto; text-wrap: balance; }
+    @media (max-width: 560px) { .facts { gap: 10px; } .facts .fact { width: 100%; } .facts .fact .val { margin-top: 0; } }
+    .case-top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 14px; }
+    .date { display: inline-flex; align-items: center; min-height: 32px; padding: 0 16px; border-radius: 999px; background: #3A2420; color: #F4EEEC; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: #E2DAD0; font-size: 13.5px; font-weight: 600; }
+    .hero2 { display: grid; grid-template-columns: minmax(0,6fr) minmax(0,5fr); gap: clamp(32px,5vw,64px); align-items: center; }
+    .section { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: clamp(24px,4vw,48px); }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 28px 0 36px; }
+    .stat { border-top: 1px solid rgba(58,36,32,.25); padding-top: 14px; }
+    .stat .num { font-family: 'Cal Sans', system-ui, sans-serif; font-size: clamp(26px,3vw,36px); line-height: 1.1; letter-spacing: -0.015em; }
+    .stat .lbl { font-size: 13.5px; line-height: 1.45; margin-top: 6px; }
+    .copy h3 { font-size: 16px; margin-bottom: 6px; }
+    .copy p { margin: 0 0 22px; font-size: 14.5px; line-height: 1.6; }
+    .dolist { margin: 0 0 22px; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; }
+    .why { margin-top: 4px; padding: 20px 22px; background: #E6E0D8; border-radius: 18px; }
+    .why p { margin: 0; font-size: 14.5px; line-height: 1.65; }
+    .todo { background: rgba(198,30,52,.09); border-radius: 4px; padding: 0 4px; }
+    .ph { aspect-ratio: 16 / 10; background: #E2DAD0; border: 1px dashed rgba(58,36,32,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 20px; text-align: center; }
+    .ph-t { font-weight: 600; font-size: 14px; }
+    .ph-s { font-size: 13px; line-height: 1.4; max-width: 340px; }
+    .car-view { position: relative; overflow: hidden; border-radius: 18px; }
+    .car-track { display: flex; transition: transform .35s ease; }
+    .slide { flex: 0 0 100%; min-width: 0; }
+    .car-btn { position: absolute; top: 50%; margin-top: -22px; width: 44px; height: 44px; border-radius: 999px; border: 0; background: rgba(238,234,228,.94); color: #3A2420; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s ease, color .15s ease; }
+    .car-btn:hover { background: #C61E34; color: #FFFFFF; }
+    .car-prev { left: 12px; }
+    .car-next { right: 12px; }
+    .car-btn:focus-visible, .dot:focus-visible, .play:focus-visible { outline: 2px solid #3A2420; outline-offset: 3px; }
+    .car-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+    .dots { display: flex; }
+    .dot { width: 28px; height: 44px; background: none; border: 0; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .dotc { width: 9px; height: 9px; border-radius: 999px; display: block; }
+    .car-count { font-size: 13px; font-weight: 600; }
+    .vid { position: relative; aspect-ratio: 16 / 9; background: #3A2420; border-radius: 18px; display: flex; align-items: center; justify-content: center; color: #F4EEEC; overflow: hidden; }
+    .play { width: 76px; height: 76px; border-radius: 999px; border: 0; background: #C61E34; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s ease; }
+    .play:hover { background: #9E1729; }
+    .vid-tag { position: absolute; left: 0; right: 0; bottom: 14px; padding: 0 12px; text-align: center; font-size: 12px; opacity: .85; }
+    .vid-square { aspect-ratio: 16 / 9; width: 100%; }
+    .hero-media { display: flex; flex-direction: column; align-items: center; gap: 16px; flex: 0 0 auto; max-width: 100%; }
+    .watch { display: flex; align-items: flex-end; justify-content: center; gap: 2px; color: #C61E34; }
+    .watch .script { font-family: 'Caveat', cursive; font-size: 30px; line-height: 1.05; font-weight: 600; text-align: right; white-space: nowrap; }
+    .watch svg { flex-shrink: 0; display: block; }
+    .case-head { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 14px; }
+    .case-head .meta { margin: 0; }
+    .stores { display: flex; flex-wrap: wrap; gap: 10px; }
+    .store { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; border-radius: 10px; background: #3A2420; color: #F4EEEC; transition: background .15s ease; }
+    .store:hover { background: #C61E34; color: #FFFFFF; }
+    .store .top { display: block; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; opacity: .8; }
+    .store .name { display: block; font-size: 14.5px; font-weight: 600; line-height: 1.2; }
+    .watch-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14.5px; font-weight: 600; color: #C61E34; min-height: 44px; transition: color .15s ease; }
+    .watch-link:hover { color: #9E1729; }
+    .watch-link span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .watch-link svg { flex-shrink: 0; }
+    .fullw { margin-top: 40px; }
+    .dolist-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 44px; }
+    .why-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 44px; }
+    .checks { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 10px; }
+    .checks li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.5; }
+    .checks svg { width: 17px; height: 17px; flex-shrink: 0; margin-top: 3px; color: #C61E34; }
+    @media (max-width: 820px) { .dolist-2, .why-grid { grid-template-columns: 1fr; } }
+    .work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    @media (max-width: 820px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 480px) { .work-grid { grid-template-columns: 1fr; } }
+    .work-tile { border-radius: 16px; overflow: hidden; background: #E2DAD0; }
+    .work-tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .logos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+    .logo-card { background: #FFFFFF; border-radius: 18px; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; padding: 26px; overflow: hidden; }
+    .logo-card img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+    .logo-card.tight { padding: 14px; }
+    a.logo-card { transition: transform .15s ease, box-shadow .15s ease; }
+    a.logo-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(58,36,32,.14); }
+    .logo-card.bleed { padding: 0; }
+    .logo-card.bleed img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .card h3 { font-size: 16px; margin: 12px 0 4px; }
+    .card p { margin: 0; font-size: 14px; line-height: 1.5; }
+    .card .ph { aspect-ratio: 4 / 3; border-radius: 14px; }
+    .tile { aspect-ratio: 3 / 2; border: 1px dashed rgba(58,36,32,.35); border-radius: 14px; background: #E6E0D8; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px; text-align: center; }
+    .tile strong { font-family: 'Cal Sans', system-ui, sans-serif; font-weight: 400; font-size: 18px; }
+    .tile span { font-size: 12.5px; }
+    .collage { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 150px; gap: 12px; }
+    .cell { background: #E2DAD0; border: 1px dashed rgba(58,36,32,.35); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px; text-align: center; }
+    .cell strong { font-family: 'Cal Sans', system-ui, sans-serif; font-weight: 400; font-size: 17px; }
+    .cell span { font-size: 12.5px; line-height: 1.4; }
+    .cell.big { grid-column: span 2; grid-row: span 2; }
+    .cell.tall { grid-row: span 2; }
+    .cell.wide { grid-column: span 3; }
+    @media (max-width: 560px) {
+      .collage { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 130px; }
+      .cell.big, .cell.tall, .cell.wide { grid-column: auto; grid-row: auto; }
+      .cell.big { grid-column: span 2; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .car-track { transition: none; } .jump:hover svg { transform: none; } }
+    @media (max-width: 820px) {
+      .hero2 { grid-template-columns: 1fr; }
+      .section { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; gap: 16px; }
+      .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) { .grid3 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div style="width: 100%;">
+  <span id="top" style="display: block; height: 0;"></span>
+
+  <!-- NAV (page is not linked from the main menu) -->
+  <header style="position: sticky; top: 0; z-index: 30; background: rgba(238,234,228,.92); backdrop-filter: blur(10px); padding: 32px clamp(20px,5vw,48px) 14px;">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+      <a href="/" aria-label="Founding Myth home" style="display: flex;">
+        <img src="../images/logo.png" alt="Founding Myth" style="height: 41px; width: 95px; display: block">
+      </a>
+      <nav style="display: flex; align-items: center; gap: 28px;" aria-label="Main">
+        <a href="https://calendly.com/shahbanoi" target="_blank" rel="noopener noreferrer" class="pill pill-soft" style="padding: 10px 20px; min-height: 42px; font-size: 15px;">Book a call</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-band">
+    <div class="wrap hero-card">
+      <div class="hero-media">
+        <img src="../images/headshot.jpg" alt="Shahbano Imran" style="width: 200px; height: 200px; border-radius: 999px; object-fit: cover; display: block;">
+        <a href="https://calendly.com/shahbanoi" target="_blank" rel="noopener noreferrer" class="pill pill-dark" style="min-width: 170px;">Book a call</a>
+        <a href="https://www.linkedin.com/in/shahbano/" target="_blank" rel="noopener noreferrer" class="navlink" style="display: inline-flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+        </a>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0;">
+        <p class="eyebrow" style="margin-bottom: 14px; color: #C61E34; font-weight: 800;">Shahbano Imran</p>
+        <h1 class="hero-title" style="font-size: clamp(26px,2.9vw,36px); line-height: 1.12; margin-bottom: 16px;">Product Lead &amp; Designer</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 600px;">I work with early-stage teams to take products from idea to validation, owning design and facilitating delivery and GTM. Based in Dallas, TX.</p>
+        <ul class="bullets">
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#3A2420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></span><span class="txt">16 years in product</span></li>
+          <li><span class="ico"><img src="../images/yc-logo.svg" alt="Y Combinator"></span><span class="txt">Y Combinator-backed founder</span></li>
+          <li><span class="ico"><img src="../images/bc-logo.png" alt="Boston College" style="mix-blend-mode: multiply;"></span><span class="txt">Computer Science degree, Boston College</span></li>
+        </ul>
+        <div class="fw">
+          <span class="eyebrow">Featured work</span>
+          <a href="#apollos" class="jump">Apollos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+          <a href="#zepto" class="jump">Zepto <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+          <a href="#localon" class="jump">LocalOn <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+          <a href="#more" class="jump">More work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+          <a href="#brand" class="jump">Brand <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY 1: APOLLOS -->
+  <section class="band">
+    <span id="apollos" class="anchor"></span>
+    <div class="wrap">
+      <div class="case-top"><p class="eyebrow">Case study 01</p></div>
+      <h2 style="font-size: clamp(24px,2.8vw,34px); line-height: 1.15; max-width: 760px; text-wrap: balance;">Apollos: took a donation platform from idea to validation ($16M in gross volume) in 8 months.</h2>
+      <p class="meta"><strong>2025 - 2026</strong><span class="sep" aria-hidden="true"></span><span>Entrepreneur in Residence, Differential</span></p>
+
+      <div class="facts">
+        <div class="fact"><div class="lbl">Gross volume in 8 months</div><div class="val">$16M</div></div>
+        <div class="fact"><div class="lbl">Tap-to-give time</div><div class="val">7 sec</div></div>
+        <div class="fact"><div class="lbl">Initial customers</div><div class="val">3</div></div>
+        <a href="https://www.crossroads.net/giving" target="_blank" rel="noopener noreferrer" class="fact fact-link">
+          <span class="lbl">See it live</span>
+          <span class="val">Customer website <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+        </a>
+      </div>
+
+      <div class="section">
+        <div class="copy">
+          <h3>Summary</h3>
+          <p>As founding product lead, I took Apollos Giving, a Stripe-based donations platform for large churches and nonprofits, from idea to revenue in eight months. It reached validation with three initial customers and $16M in gross volume, and my original designs are still in production today.</p>
+          <h3>The challenge</h3>
+          <p>This was not a typical 0-to-1 launch. Apollos Giving was a new business line inside an existing company, and our initial customers each collected $100M to $200M a year in donations.</p>
+          <p>That changed the product approach. In most early-stage work, you aim to ship a lean MVP and iterate from user feedback. With these large customer accounts, every payment bug could affect a substantial amount of money. That meant the product had to be complete and clean on day one, with regulatory compliance requirements met, while still being scoped tightly enough to launch quickly. On top of that, our custom Stripe setup made the platform liable for disputes, refunds and other payment ops, which meant I had to understand payments more deeply than everyone else on the team.</p>
+        </div>
+        <div>
+          <div class="car-view" data-carousel="apollos">
+            <div class="car-track">
+              <div class="slide"><img src="images/apollos-tap.jpg" alt="A teal Tap Your Phone sticker with a QR code on the back of a seat, with stage lights blurred behind it" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/apollos-mobile.jpg" alt="Apollos Giving mobile donation screen on a phone, showing a $150 gift to the General Fund with a Donate with Apple Pay button" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/apollos-crossroads.jpg" alt="The live web giving flow on Crossroads Church, with amount entry, a recurring toggle, frequency and start date, and Donate with Apple Pay" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/apollos-transactions.jpg" alt="Admin transactions table with donor names and Succeeded, Failed and Pending status pills, plus campus and fund columns" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/apollos-migration.jpg" alt="Recurring Migration screen in the Giving admin, showing active, recoverable and archived recurring gift counts and a list of donors to migrate" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+            </div>
+            <button type="button" class="car-btn car-prev" aria-label="Previous image" data-car-prev><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <button type="button" class="car-btn car-next" aria-label="Next image" data-car-next><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+          </div>
+          <div class="car-foot" data-car-foot>
+            <div class="dots">
+              
+            </div>
+            <span class="car-count"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullw copy">
+        <h3>What I did</h3>
+        <ul class="dolist dolist-2">
+          <li><strong>Three giving flows.</strong> Designed in-app mobile donations using iOS App Clips, a matching web donations flow, and Tap-to-Give with NFC tags I sourced and tested with customers.</li>
+          <li><strong>Admin dashboard.</strong> Designed a transaction status model separate from Stripe's internal states, so admin users saw statuses that matched how they thought about donations.</li>
+          <li><strong>Fast reporting.</strong> Designed exports and scheduled reports that used caching to work around slow payment data, so finance teams got reconciliation-ready reports on time.</li>
+          <li><strong>Payments and compliance.</strong> Learned Stripe's implementation and business model, took the company through Stripe's enhanced due diligence, and worked with tax accountants on the company's liability.</li>
+          <li><strong>Vendors and network.</strong> Brought in compliance and implementation vendors through my Y Combinator network to solve problems the team couldn't solve alone.</li>
+          <li><strong>Delivery and QA.</strong> Wrote the roadmap, managed the dev team, and set up our first testing plan with automated nightly tests and exploratory QA.</li>
+          <li><strong>Go-to-market.</strong> Ran competitive analysis, helped set pricing, and built sales materials and customer financial projections.</li>
+        </ul>
+        <h3>Design tools</h3>
+        <div class="chips"><span class="chip">Figma</span><span class="chip">Webflow</span><span class="chip">Magic Patterns</span><span class="chip">Claude</span></div>
+        <div class="why">
+          <div class="why-grid">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Outcome</p>
+              <p>Apollos Giving launched, onboarded three enterprise customers, and processed $16M in gross revenue in eight months.</p>
+            </div>
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Where I excelled on this project</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I designed every product surface that's still in production today.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I learned complex domains fast, from payments to compliance.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I ran the project like a founder, owning every gap.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I used my network to unblock problems others couldn't.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY 2: ZEPTO -->
+  <section class="band">
+    <span id="zepto" class="anchor"></span>
+    <div class="wrap">
+      <div class="case-top"><p class="eyebrow">Case study 02</p></div>
+      <h2 style="font-size: clamp(24px,2.8vw,34px); line-height: 1.15; max-width: 760px; text-wrap: balance;">Designed the first version of Zepto: 10-minute grocery app that scaled to millions of users.</h2>
+      <p class="meta"><strong>2021 - 2022</strong><span class="sep" aria-hidden="true"></span><span>Design lead, Workbench Labs</span></p>
+
+      <div class="facts">
+        <div class="fact"><div class="lbl">Company</div><div class="val">Zepto</div></div>
+        <div class="fact"><div class="lbl">Deliverable</div><div class="val">End-to-end product design</div></div>
+        <div class="fact"><div class="lbl">Annual users</div><div class="val">48M</div></div>
+        <a href="https://apps.apple.com/app/id1575323645" target="_blank" rel="noopener noreferrer" class="fact fact-link">
+          <span class="lbl">See it on</span>
+          <span class="val">the App Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.zeptoconsumerapp" target="_blank" rel="noopener noreferrer" class="fact fact-link">
+          <span class="lbl">See it on</span>
+          <span class="val">Google Play <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+        </a>
+      </div>
+
+      <div class="section">
+        <div class="copy">
+          <h3>Summary</h3>
+          <p>I designed the first version of Zepto's mobile app (Android-first) from its launch to the first million users. It now serves ~48M annual users and 2M+ daily orders.</p>
+          <h3>The challenge</h3>
+          <p>This was not your typical grocery delivery app. Along with the app, Zepto owns the entire supply chain, from sourcing, to the stores to last-mile delivery.</p>
+          <p>That shifted the design focus. For example, when designing a traditional grocery app like Instacart, I may focus on the cart substitutions flow: a user picks an item that is commonly out of stock and has to do extra work to choose substitutions and may drop off. Since Zepto has live inventory data for its stores, this problem doesn't exist.</p>
+          <p>Zepto's design challenges focused on speed: time was the brand, with a 10-minute delivery promise. Every screen had to feel as fast as the delivery itself.</p>
+        </div>
+        <div>
+          <div class="car-view" data-carousel="zepto">
+            <div class="car-track">
+              <div class="slide"><img src="images/zepto-app.webp" alt="Zepto app screens: phone sign-in with OTP, home screen with categories and a 10-minute delivery banner, and a snacks product listing" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/zepto-web.webp" alt="Zepto website on a laptop: 'Groceries delivered in 10 minutes' with an animated Z logo" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/zepto-wild.webp" alt="Zepto team members in branded purple shirts, and delivery riders on motorbikes with Zepto helmets and bags" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+            </div>
+            <button type="button" class="car-btn car-prev" aria-label="Previous image" data-car-prev><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <button type="button" class="car-btn car-next" aria-label="Next image" data-car-next><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+          </div>
+          <div class="car-foot" data-car-foot>
+            <div class="dots">
+              
+            </div>
+            <span class="car-count"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullw copy">
+        <h3>What I did</h3>
+        <ul class="dolist dolist-2">
+          <li><strong>Speed as the brand.</strong> Designed for perceived performance with skeleton screens, fast-feeling loading states, and motion that holds attention whenever a user has to wait.</li>
+          <li><strong>Frictionless sign-in.</strong> Designed Android OTP auth with SMS auto-read, so users were signed in without typing a code, and strategically timed the location permission requests.</li>
+          <li><strong>Cart and checkout.</strong> Iterated through many cart variants and A/B tests to fit India's payment methods, promotions, and coupons without overwhelming users.</li>
+          <li><strong>Catalog density.</strong> Designed compact product cards and category navigation for thousands of SKUs, with promotions guiding users toward checkout.</li>
+          <li><strong>Live order tracking.</strong> Combined motion and illustration around a countdown timer to keep users engaged during the wait.</li>
+          <li><strong>Brand and design system.</strong> Created the time-themed logo and color system, and a design system that scaled to new sub-brands, like Zepto Cafe.</li>
+          <li><strong>Exploration.</strong> Explored dozens of flows as wireframes, then shared clickable Figma prototypes so the team could compare them on real phones.</li>
+        </ul>
+        <h3>Design tools</h3>
+        <div class="chips"><span class="chip">Figma</span><span class="chip">Illustrator</span></div>
+        <div class="why">
+          <div class="why-grid">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Outcome</p>
+              <p>The result was the end-to-end design of the mobile app, a baseline design system, and a comprehensive spec the dev team could start building from right away. The design held up through hypergrowth, new product lines, and to millions of users.</p>
+            </div>
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Where I excelled on this project</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I understood the business like a founder.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I was fast and experienced, skipping beginner mistakes.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I worked proactively, with little guidance.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I designed with implementation complexity in mind.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY 3: LOCALON -->
+  <section class="band">
+    <span id="localon" class="anchor"></span>
+    <div class="wrap">
+      <div class="case-top"><p class="eyebrow">Case study 03</p></div>
+      <h2 style="font-size: clamp(24px,2.8vw,34px); line-height: 1.15; max-width: 760px; text-wrap: balance;">LocalOn: co-founded a Y Combinator-backed SaaS company and grew it to $1M ARR.</h2>
+      <p class="meta"><strong>2010 - 2017</strong><span class="sep" aria-hidden="true"></span><span>Co-founder</span></p>
+
+      <div class="facts">
+        <div class="fact"><div class="lbl">Grew to</div><div class="val">$1M ARR</div></div>
+        <div class="fact"><div class="lbl">Paying customers</div><div class="val">~500</div></div>
+        <a href="https://techcrunch.com/2013/08/09/localon-launch/" target="_blank" rel="noopener noreferrer" class="fact fact-link">
+          <span class="lbl">See press</span>
+          <span class="val">TechCrunch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+        </a>
+      </div>
+
+      <div class="section">
+        <div class="copy">
+          <h3>Summary</h3>
+          <p>As co-founder of LocalOn, I designed and built a marketing and mobile loyalty platform for SMBs just as iPhone apps went mainstream. I took it from idea to a real business with paying customers, and it gave me foundational skills for my career.</p>
+          <h3>The challenge</h3>
+          <p>Selling to small businesses is deceptively hard. Their sales cycles look like enterprise sales, but the deal sizes are tiny: our customers paid $60 to $500 a month, yet expected hands-on help and took a long time to onboard.</p>
+          <p>The biggest challenge wasn't only building the product, it was finding a way to get it into small businesses' hands efficiently.</p>
+        </div>
+        <div>
+          <div class="car-view" data-carousel="localon">
+            <div class="car-track">
+              <div class="slide"><img src="images/localon-1-site.jpg" alt="The LocalOn marketing site: Marketing on the go, with a phone showing the app and a row of press logos" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/localon-2-dashboard.jpg" alt="The LocalOn merchant web app on a laptop, offering Make an Announcement, Create a Coupon and Promote an Event" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/localon-3-district.jpg" alt="A Shop Local Miami merchant district site built on LocalOn, shown on a monitor wrapped in a gift ribbon" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+              <div class="slide"><img src="images/localon-4-partners.jpg" alt="LocalOn partners page with merchant association and publisher logos and a testimonial from the publisher of East Bay Express" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;"></div>
+            </div>
+            <button type="button" class="car-btn car-prev" aria-label="Previous image" data-car-prev><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <button type="button" class="car-btn car-next" aria-label="Next image" data-car-next><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+          </div>
+          <div class="car-foot" data-car-foot>
+            <div class="dots">
+              
+            </div>
+            <span class="car-count"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullw copy">
+        <h3>What I did</h3>
+        <ul class="dolist dolist-2">
+          <li><strong>Distribution.</strong> Solved the distribution challenge and got quick traction by building a dues-payment product for merchant associations and business districts that worked directly with SMBs, then used those relationships to upsell the SMBs without hand-holding.</li>
+          <li><strong>Mobile and web apps.</strong> Designed the customer-facing mobile loyalty app and the merchant web app, at a time when mobile patterns were still being formalized.</li>
+          <li><strong>User research.</strong> Ran interviews with business owners and customers to shape product experiments.</li>
+          <li><strong>Product-market fit.</strong> Iterated continuously on the product and positioning based on what customers used and paid for.</li>
+          <li><strong>Team and funding.</strong> Fundraised, then hired and led the team.</li>
+          <li><strong>Go-to-market.</strong> Ran sales, partnerships, and onboarding directly with customers.</li>
+        </ul>
+        <div class="why">
+          <div class="why-grid">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Outcome</p>
+              <p>LocalOn became a real business with paying customers, backed by Y Combinator and other angel investors. Building it right out of college taught me foundational skills and judgement I still use today. Although the business shut down almost 10 years ago, I still get occasional calls from LocalOn customers telling me they wish it still existed.</p>
+            </div>
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px;">Where I excelled on this project</p>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I treated distribution as a product problem.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I learned directly from customers in the field.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I did every job a young company needed.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg><span>I designed for a new platform before patterns existed.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO DESIGNED -->
+  <section class="band">
+    <span id="more" class="anchor"></span>
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom: 12px;">More product work</p>
+      <h2 style="font-size: clamp(21px,2.2vw,26px); line-height: 1.2; margin-bottom: 12px;">Other products I've designed.</h2>
+      <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.6; max-width: 640px;">I've had lots of practice designing products, websites, and decks for customers, employers, and my own ideas.</p>
+      <div class="work-grid">
+        <div class="work-tile"><img src="images/work-niyama.jpg" alt="Niyama, an on-demand private yoga app: a sign-in screen and a home screen with practice stats and an upcoming session"></div>
+        <div class="work-tile"><img src="images/work-gilgamesh-site.jpg" alt="Gilgamesh website shown on a laptop and two phones, with the headline An Epic Leap For Mental Health"></div>
+        <div class="work-tile"><img src="images/work-openspaces-deck.jpg" alt="Four slides from the Open Spaces deck: cover, 2019 transactions, how booking works, and the market opportunity"></div>
+        <div class="work-tile"><img src="images/work-openspaces-app.jpg" alt="Open Spaces mobile app: sign-in, a browse list of creative spaces, and a listing with amenities and a Book it button"></div>
+        <div class="work-tile"><img src="images/work-livingkitchens.jpg" alt="Living Kitchens website: farm fresh ready-to-cook meals, with a How It Works row of three steps"></div>
+        <div class="work-tile"><img src="images/work-sunfarm.jpg" alt="SunFarm solar monitoring dashboard: a list of array units with status and output beside a unit health grid and a performance chart"></div>
+        <div class="work-tile"><img src="images/work-design-system.jpg" alt="A design system sheet showing a type scale, button states, and a tinted colour palette"></div>
+        <div class="work-tile"><img src="images/work-rv-deck.jpg" alt="An R\V investor deck slide titled Our Thesis, with a positioning chart of accelerators, angels and traditional VCs"></div>
+        <div class="work-tile"><img src="images/work-oddplum.jpg" alt="Odd Plum logo: a navy wordmark with a potted plant and a pink plum, on a yellow and pink background"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND -->
+  <section class="band">
+    <span id="brand" class="anchor"></span>
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom: 12px;">Brand and logos</p>
+      <h2 style="font-size: clamp(21px,2.2vw,26px); line-height: 1.2; margin-bottom: 12px; max-width: 640px;">Logos and brand kits, created using the Jungian archetypes framework.</h2>
+      <p style="margin: 0 0 12px; font-size: 14.5px; line-height: 1.6; max-width: 680px;">I work with founders to capture the essence of the company mission and the intention they want to set forth, using frameworks that help ground those ideas into language.</p>
+      <p style="margin: 0 0 28px; font-size: 14.5px; line-height: 1.6; max-width: 680px;">From there I work on elements like color, type, and a mark that is scalable, unique, and memorable, then create a brand kit the company can use in product and marketing.</p>
+      <div class="logos-grid">
+        <a href="https://www.zeptonow.com" target="_blank" rel="noopener noreferrer" class="logo-card bleed"><img src="images/brand-zepto.jpg" alt="Zepto wordmark in coral on a magenta and purple gradient"></a>
+        <a href="https://www.sensorium.bio" target="_blank" rel="noopener noreferrer" class="logo-card tight"><img src="images/brand-sensorium.jpg" alt="Sensorium Therapeutics logo: a green rounded-tile mark beside a navy wordmark"></a>
+        <a href="https://www.gilgameshpharmaceutical.com" target="_blank" rel="noopener noreferrer" class="logo-card tight"><img src="images/brand-gilgamesh.jpg" alt="Gilgamesh logo: a fanned pink and blue petal mark above a blue wordmark"></a>
+        <div class="logo-card"><img src="images/brand-syro.png" alt="Syro logo: a navy wordmark with an angled arrow mark"></div>
+        <div class="logo-card"><img src="images/brand-kono.jpg" alt="KONO Koreatown Northgate logo, with a rainbow ring forming the O"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <div style="max-width: 600px;">
+        <h2 style="font-size: clamp(21px,2.2vw,26px); line-height: 1.2; margin: 0;">Want to work with me?</h2>
+      </div>
+      <a href="https://calendly.com/shahbanoi" target="_blank" rel="noopener noreferrer" class="pill pill-dark" style="min-width: 170px;">Book a call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 0 clamp(20px,5vw,48px) 32px;">
+    <div class="wrap" style="border-top: 1px solid rgba(58,36,32,.14); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <img src="../images/logo.png" alt="Founding Myth" style="height: 36px; width: 84px">
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll('[data-carousel]').forEach(function (view) {
+    var track  = view.querySelector('.car-track');
+    var slides = track.children;
+    var total  = slides.length;
+    var foot   = view.parentNode.querySelector('[data-car-foot]');
+    var dots   = foot ? foot.querySelector('.dots') : null;
+    var count  = foot ? foot.querySelector('.car-count') : null;
+    var i = 0;
+
+    if (dots) {
+      for (var n = 0; n < total; n++) {
+        (function (n) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'dot';
+          b.setAttribute('aria-label', 'Show image ' + (n + 1));
+          b.innerHTML = '<span class="dotc"></span>';
+          b.addEventListener('click', function () { go(n); });
+          dots.appendChild(b);
+        })(n);
+      }
+    }
+
+    function go(n) {
+      i = ((n % total) + total) % total;
+      track.style.transform = 'translateX(-' + (i * 100) + '%)';
+      if (dots) {
+        Array.prototype.forEach.call(dots.children, function (b, k) {
+          b.firstChild.style.background = (k === i) ? '#3A2420' : 'rgba(58,36,32,.25)';
+        });
+      }
+      if (count) { count.textContent = (i + 1) + ' / ' + total; }
+    }
+
+    var prev = view.querySelector('[data-car-prev]');
+    var next = view.querySelector('[data-car-next]');
+    if (prev) { prev.addEventListener('click', function () { go(i - 1); }); }
+    if (next) { next.addEventListener('click', function () { go(i + 1); }); }
+    go(0);
+  });
+})();
+</script>
+</body>
+</html>
