@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="description" content="Finish page prototype for the Impact Builder Program, a test task for High Impact Professionals by Shahbano Imran.">
+<meta property="og:title" content="Impact Builder Program: Finish Page Prototype">
+<meta property="og:description" content="Test task for High Impact Professionals by Shahbano Imran.">
+<title>Congratulations · Impact Builder Program · High Impact Professionals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#002a54;
+    --navy-2:#0d1b2e;
+    --navy-ink:#0f2742;
+    --orange:#f4511e;
+    --orange-2:#ff6a2b;
+    --sky:#cfe4f7;
+    --sky-2:#e6f1fb;
+    --bg:#f8f8f8;
+    --ink:#1b1f24;
+    --muted:#5b6672;
+    --line:#e3e6ea;
+    --linkedin:#0a66c2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif}
+  a,button{font:inherit;color:inherit}
+  button{cursor:pointer;border:0;background:none}
+
+  /* ---------- Header ---------- */
+  .hip-header{background:linear-gradient(100deg,var(--navy) 0%,#04305c 45%,var(--navy-2) 100%);height:76px}
+  .hip-header .wrap{max-width:1180px;height:100%;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+  .logo-mark{background:#fff;color:var(--navy);font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:22px;letter-spacing:.5px;line-height:1;padding:7px 6px 6px;border:2px solid #fff;outline:2px solid var(--navy);outline-offset:-5px}
+  .logo-text{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:700;line-height:1.08;letter-spacing:.6px}
+  .logo-text .l1{font-size:15.5px;display:block}
+  .logo-text .l2{font-size:12.5px;display:block}
+  .account{display:flex;align-items:center;gap:6px;color:#fff;padding:6px 8px;border-radius:999px}
+  .account:hover{background:rgba(255,255,255,.08)}
+  .avatar{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.55);display:grid;place-items:center}
+
+  /* ---------- Layout ---------- */
+  .shell{display:grid;grid-template-columns:320px 1fr;min-height:calc(100vh - 76px)}
+  aside{border-right:1px solid var(--line);padding:24px 22px;background:#fff}
+  .course-head{display:flex;align-items:center;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .course-tile{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--navy),#0b3f73);display:grid;place-items:center;flex:none}
+  .course-head h2{font-size:19px;font-weight:700;line-height:1.2;color:var(--navy-ink)}
+  .course-head small{display:block;font-family:"Source Sans 3",system-ui,sans-serif;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px;letter-spacing:.2px}
+  .modules{list-style:none}
+  .modules li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 4px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;line-height:1.3}
+  .modules li .done{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--sky);color:var(--navy);flex:none;margin-right:10px}
+  .modules li span.t{display:flex;align-items:center}
+  .cert-link{margin-top:22px;display:flex;justify-content:space-between;align-items:center;padding:16px;border:1px solid #9cc4ea;background:var(--sky-2);border-radius:10px;color:var(--navy)}
+  .cert-link b{display:block;font-size:16px}
+  .cert-link small{font-size:14px;color:#2b5a87}
+
+  main{background:#fff;min-width:0}
+  .crumbs{display:flex;align-items:center;gap:10px;padding:13px 32px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+  .crumbs .hide{display:flex;align-items:center;gap:6px;padding-right:12px;border-right:1px solid var(--line);font-weight:500}
+  .crumbs .cur{color:var(--ink);font-weight:500}
+  .crumbs{white-space:nowrap;overflow-x:auto}
+  .content{max-width:820px;margin:0 auto;padding:36px 28px 80px}
+
+  /* ---------- Certificate card ---------- */
+  .done-card{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 12px 32px -22px rgba(0,30,60,.45);background:#fff}
+  .done-left{padding:30px 32px 30px}
+  .laurel-sm{width:84px;height:77px;display:block;margin-left:-8px}
+  .done-left h1{font-size:26px;line-height:1.22;font-weight:800;color:var(--navy-ink);letter-spacing:-.3px;margin-top:8px}
+  .done-left .sub{margin-top:8px;font-size:16.5px;color:var(--muted);line-height:1.45}
+  .meta{display:flex;gap:0;margin-top:20px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .meta div{flex:1;padding:10px 14px;background:#fafbfc}
+  .meta div+div{border-left:1px solid var(--line)}
+  .meta dt{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+  .meta dd{font-size:15.5px;font-weight:600;margin-top:2px;color:var(--ink)}
+  .cert-actions{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+  .btn-sm{padding:10px 14px;font-size:15px}
+  .btn-icon{padding:10px 12px}
+  .done-right{background-color:var(--sky-2);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 64 64'%3E%3Cpath d='M24 26l-6 6 6 6M40 26l6 6-6 6M35 23l-6 18' fill='none' stroke='%23002a54' stroke-opacity='.08' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");padding:24px;display:grid;place-items:center;border-left:1px solid var(--line)}
+  .mini-cert{background:#fff;border:1px solid #d5e3f1;border-top:4px solid var(--navy);border-radius:4px;padding:18px 20px 20px;text-align:center;width:100%;box-shadow:0 8px 20px -16px rgba(0,30,60,.5)}
+  .badge-sm{width:120px;height:104px;display:block;margin:0 auto 6px}
+  .eyebrow{font-size:11.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .mc-title{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-size:21px;font-weight:800;color:var(--navy-ink);margin-top:4px;letter-spacing:-.2px}
+  .mc-aw{margin-top:14px}
+  .mc-name{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-size:19px;font-weight:700;margin-top:2px}
+  .mc-desc{margin-top:12px;font-size:14px;line-height:1.5;color:#4a5560}
+  .mini-logo{display:flex;align-items:center;gap:6px;font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--navy);font-size:11px;letter-spacing:.4px;line-height:1.05}
+  .mini-logo .m{border:1.5px solid var(--navy);padding:3px 3px 2px;font-weight:800;font-size:13px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;border-radius:4px;padding:12px 18px;line-height:1;white-space:nowrap;transition:filter .15s, background .15s}
+  .btn-li{background:var(--linkedin);color:#fff}
+  .btn-li:hover{filter:brightness(1.08)}
+  .btn-ghost{border:1px solid #c9ced4;background:#fff;color:var(--ink)}
+  .btn-ghost:hover{background:#f3f5f7}
+  .btn-orange{background:linear-gradient(180deg,var(--orange-2),var(--orange));color:#fff}
+  .btn-orange:hover{filter:brightness(1.06)}
+  .btn-outline{border:1.5px solid var(--orange);color:var(--navy);background:#fff}
+
+  /* ---------- Section heads ---------- */
+  section.block{margin-top:60px}
+  .sec-eyebrow{font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--orange)}
+  .sec-title{font-size:28px;font-weight:800;color:var(--navy-ink);margin-top:6px;letter-spacing:-.3px}
+  .sec-sub{margin-top:8px;font-size:17px;color:var(--muted);line-height:1.5;max-width:640px}
+
+  /* ---------- Next steps ---------- */
+  .steps{display:grid;gap:16px;margin-top:26px}
+  .step{display:grid;grid-template-columns:200px 1fr;border-radius:4px;overflow:hidden;box-shadow:0 6px 22px -14px rgba(0,30,60,.45);background:linear-gradient(100deg,var(--sky) 0%,var(--sky-2) 100%)}
+  .step .art{background:linear-gradient(135deg,var(--navy),#0b3f73);display:grid;place-items:center;position:relative}
+  .step .art .num{position:absolute;z-index:1;top:14px;left:16px;font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:13px;letter-spacing:1px;color:rgba(255,255,255,.7)}
+  .step .copy{padding:24px 28px}
+  .step h3{font-family:"Source Sans 3",system-ui,sans-serif;font-size:22px;font-weight:600;color:var(--navy-ink);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .tag{font-family:"Source Sans 3",system-ui,sans-serif;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;background:var(--orange);color:#fff;padding:3px 8px;border-radius:3px}
+  .step p{margin-top:8px;font-size:16.5px;line-height:1.55;color:#28323d}
+  .step .row{display:flex;align-items:center;gap:16px;margin-top:16px;flex-wrap:wrap}
+  .step .note{font-size:14.5px;color:#3c5a78}
+
+  /* ---------- Survey ---------- */
+  .survey{margin-top:26px;border:1px solid var(--line);border-radius:6px;padding:28px 30px;background:#fff}
+  .survey label.q{display:block;font-weight:600;font-size:17px;color:var(--ink)}
+  .nps{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;margin-top:14px}
+  .nps input{position:absolute;opacity:0;pointer-events:none}
+  .nps label{display:grid;place-items:center;height:44px;border:1px solid #c9ced4;border-radius:4px;font-weight:600;color:#33404d;cursor:pointer;transition:all .12s;background:#fff}
+  .nps label:hover{border-color:var(--navy);background:var(--sky-2)}
+  .nps input:checked + label{background:var(--navy);border-color:var(--navy);color:#fff}
+  .nps-scale{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-top:8px}
+  .survey textarea{width:100%;margin-top:10px;min-height:92px;border:1px solid #c9ced4;border-radius:4px;padding:12px 14px;font:inherit;font-size:16px;resize:vertical;color:var(--ink)}
+  .survey textarea::placeholder{color:#9aa3ad}
+  .survey textarea:focus{outline:2px solid #9cc4ea;border-color:var(--navy)}
+  .survey .foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px;flex-wrap:wrap}
+  .survey .foot small{color:var(--muted);font-size:14.5px}
+  .mt{margin-top:24px}
+
+  /* ---------- Refer ---------- */
+  .refer{margin-top:72px;border-radius:14px;padding:44px 40px 40px;background:linear-gradient(115deg,var(--navy) 0%,#04305c 55%,var(--navy-2) 100%);color:#fff;text-align:center}
+  .refer .sec-eyebrow{color:#ff8a5c}
+  .refer h2{font-size:30px;font-weight:800;margin-top:8px;letter-spacing:-.3px}
+  .refer > p{margin:12px auto 0;max-width:600px;font-size:17px;line-height:1.55;color:#d6e4f2}
+  .refer-card{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;background:#fff;color:var(--ink);border-radius:8px;overflow:hidden;text-align:left}
+  .refer-card .l{padding:28px 30px}
+  .refer-card .l h3{font-family:"Source Sans 3",system-ui,sans-serif;font-size:21px;font-weight:600;color:var(--navy-ink)}
+  .refer-card .l p{margin-top:10px;font-size:16.5px;line-height:1.55;color:#3a4552}
+  .refer-card .l .btns{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:18px}
+  .refer-card .r{background:#f1f3f5;padding:22px;display:flex;flex-direction:column;justify-content:center}
+  .preview-lbl{font-size:12px;font-weight:700;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase}
+  .post-head{display:flex;align-items:center;gap:10px;margin-top:12px}
+  .post-head .pa{width:34px;height:34px;border-radius:50%;background:#d4dae1}
+  .post-head .lines span{display:block;height:8px;border-radius:4px;background:#d4dae1}
+  .post-head .lines span+span{margin-top:6px;width:60%}
+  .post-text{margin-top:12px;font-size:15.5px;line-height:1.5;color:#2a333d}
+  .post-img{margin-top:12px;border-radius:6px;padding:16px;background:linear-gradient(130deg,var(--navy),#0b3f73);color:#fff}
+  .post-img .pt{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:16px;margin-top:10px}
+  .post-img .ps{font-size:12px;color:#c4d6ea;margin-top:4px}
+  .post-img .pb{display:inline-block;margin-top:10px;background:var(--orange);font-size:11px;font-weight:700;padding:4px 8px;border-radius:2px}
+  .bubble{align-self:flex-end;max-width:300px;background:var(--navy);color:#fff;border-radius:12px 12px 2px 12px;padding:14px 16px;font-size:15px;line-height:1.45}
+  .bubble u{color:#bfe0ff;word-break:break-all}
+  .bubble .time{display:block;text-align:right;font-size:12px;color:#a9c3de;margin-top:6px}
+
+  /* ---------- Footer ---------- */
+  footer{background:linear-gradient(100deg,var(--navy) 0%,#04305c 45%,var(--navy-2) 100%);color:#fff}
+  footer .wrap{max-width:1180px;margin:0 auto;padding:48px 28px 26px}
+  footer .top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  footer .tagline{margin-top:16px;max-width:340px;font-size:16.5px;line-height:1.5;color:#e2ebf4}
+  footer .links{display:grid;grid-template-columns:repeat(2,auto);gap:12px 44px;align-content:start}
+  footer .links span{text-decoration:underline;text-underline-offset:3px;font-size:16px;color:#fff;cursor:default}
+  footer .links h4{grid-column:1/-1;font-family:"Source Sans 3",system-ui,sans-serif;font-size:19px;font-weight:600;margin-bottom:4px}
+  footer .bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.55);text-align:center;font-size:14.5px;color:#d6e2ee}
+
+  @media (max-width:960px){
+    .shell{grid-template-columns:1fr}
+    aside{display:none}
+  }
+  @media (max-width:680px){
+    .done-card{grid-template-columns:1fr}
+    .done-right{border-left:0;border-top:1px solid var(--line)}
+    .done-left{padding:24px 22px}
+    .step{grid-template-columns:1fr}
+    .step .art{height:110px}
+    .refer{padding:32px 18px}
+    .refer-card{grid-template-columns:1fr}
+    .nps{grid-template-columns:repeat(6,1fr)}
+    .logo-text{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header (logo returns to highimpactprofessionals.org; avatar = account/courses dropdown) ===== -->
+<header class="hip-header">
+  <div class="wrap">
+    <span class="logo" aria-label="High Impact Professionals home">
+      <span class="logo-mark">HIP</span>
+      <span class="logo-text"><span class="l1">HIGH IMPACT</span><span class="l2">PROFESSIONALS</span></span>
+    </span>
+    <button class="account" aria-label="Account menu: my courses">
+      <span class="avatar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+
+  <!-- ===== Sidebar: course modules ===== -->
+  <aside>
+    <div class="course-head">
+      <div class="course-tile">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+      </div>
+      <div>
+        <h2>Impact Builder Program</h2>
+        <small>4-week cohort · Completed</small>
+      </div>
+    </div>
+    <ul class="modules">
+      <li><span class="t"><span class="done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>1. AI Landscape</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></li>
+      <li><span class="t"><span class="done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>2. Ethics &amp; Risks</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></li>
+      <li><span class="t"><span class="done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>3. Building for Impact</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></li>
+      <li><span class="t"><span class="done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>4. Capstone Project</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></li>
+      <li><span class="t"><span class="done"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>5. Demo Day</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></li>
+    </ul>
+    <div class="cert-link">
+      <div><b>Your Impact Builder Certificate</b><small>View your certificate</small></div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </aside>
+
+  <!-- ===== Main ===== -->
+  <main>
+    <div class="crumbs">
+      <span class="hide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Hide</span>
+      <span>Courses</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      <span>Impact Builder Program</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      <span class="cur">Congratulations</span>
+    </div>
+
+    <div class="content">
+
+      <!-- ===== 1. Certificate card ===== -->
+      <div class="done-card">
+        <div class="done-left">
+          <svg class="laurel-sm" viewBox="0 0 240 220" aria-hidden="true">
+            <g fill="#9cc4ea"><path d="M94.7 181.5 A74 74 0 0 1 72.4 55.3" fill="none" stroke="#9cc4ea" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="81.0" cy="185.3" rx="5.2" ry="13.0" opacity="1" transform="rotate(97.0 81.0 185.3)"/><ellipse cx="89.5" cy="169.4" rx="5.2" ry="13.0" opacity="0.7" transform="rotate(27.0 89.5 169.4)"/><ellipse cx="64.5" cy="173.7" rx="5.2" ry="12.6" opacity="1" transform="rotate(83.0 64.5 173.7)"/><ellipse cx="76.5" cy="160.3" rx="5.2" ry="12.6" opacity="0.7" transform="rotate(13.0 76.5 160.3)"/><ellipse cx="51.2" cy="158.4" rx="5.2" ry="12.1" opacity="1" transform="rotate(69.0 51.2 158.4)"/><ellipse cx="66.1" cy="148.3" rx="5.2" ry="12.1" opacity="0.7" transform="rotate(-1.0 66.1 148.3)"/><ellipse cx="42.0" cy="140.4" rx="5.2" ry="11.7" opacity="1" transform="rotate(55.0 42.0 140.4)"/><ellipse cx="58.9" cy="134.2" rx="5.2" ry="11.7" opacity="0.7" transform="rotate(-15.0 58.9 134.2)"/><ellipse cx="37.5" cy="120.7" rx="5.2" ry="11.2" opacity="1" transform="rotate(41.0 37.5 120.7)"/><ellipse cx="55.4" cy="118.8" rx="5.2" ry="11.2" opacity="0.7" transform="rotate(-29.0 55.4 118.8)"/><ellipse cx="37.8" cy="100.4" rx="5.2" ry="10.8" opacity="1" transform="rotate(27.0 37.8 100.4)"/><ellipse cx="55.6" cy="103.0" rx="5.2" ry="10.8" opacity="0.7" transform="rotate(-43.0 55.6 103.0)"/><ellipse cx="43.0" cy="80.9" rx="5.2" ry="10.3" opacity="1" transform="rotate(13.0 43.0 80.9)"/><ellipse cx="59.7" cy="87.7" rx="5.2" ry="10.3" opacity="0.7" transform="rotate(-57.0 59.7 87.7)"/><ellipse cx="52.9" cy="63.2" rx="5.2" ry="9.8" opacity="1" transform="rotate(-1.0 52.9 63.2)"/><ellipse cx="67.4" cy="73.8" rx="5.2" ry="9.8" opacity="0.7" transform="rotate(-71.0 67.4 73.8)"/><ellipse cx="66.6" cy="48.4" rx="5.2" ry="9.4" opacity="1" transform="rotate(-15.0 66.6 48.4)"/><ellipse cx="78.2" cy="62.2" rx="5.2" ry="9.4" opacity="0.7" transform="rotate(-85.0 78.2 62.2)"/><path d="M145.3 181.5 A74 74 0 0 0 167.6 55.3" fill="none" stroke="#9cc4ea" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="159.0" cy="185.3" rx="5.2" ry="13.0" opacity="1" transform="rotate(-97.0 159.0 185.3)"/><ellipse cx="150.5" cy="169.4" rx="5.2" ry="13.0" opacity="0.7" transform="rotate(-27.0 150.5 169.4)"/><ellipse cx="175.5" cy="173.7" rx="5.2" ry="12.6" opacity="1" transform="rotate(-83.0 175.5 173.7)"/><ellipse cx="163.5" cy="160.3" rx="5.2" ry="12.6" opacity="0.7" transform="rotate(-13.0 163.5 160.3)"/><ellipse cx="188.8" cy="158.4" rx="5.2" ry="12.1" opacity="1" transform="rotate(-69.0 188.8 158.4)"/><ellipse cx="173.9" cy="148.3" rx="5.2" ry="12.1" opacity="0.7" transform="rotate(1.0 173.9 148.3)"/><ellipse cx="198.0" cy="140.4" rx="5.2" ry="11.7" opacity="1" transform="rotate(-55.0 198.0 140.4)"/><ellipse cx="181.1" cy="134.2" rx="5.2" ry="11.7" opacity="0.7" transform="rotate(15.0 181.1 134.2)"/><ellipse cx="202.5" cy="120.7" rx="5.2" ry="11.2" opacity="1" transform="rotate(-41.0 202.5 120.7)"/><ellipse cx="184.6" cy="118.8" rx="5.2" ry="11.2" opacity="0.7" transform="rotate(29.0 184.6 118.8)"/><ellipse cx="202.2" cy="100.4" rx="5.2" ry="10.8" opacity="1" transform="rotate(-27.0 202.2 100.4)"/><ellipse cx="184.4" cy="103.0" rx="5.2" ry="10.8" opacity="0.7" transform="rotate(43.0 184.4 103.0)"/><ellipse cx="197.0" cy="80.9" rx="5.2" ry="10.3" opacity="1" transform="rotate(-13.0 197.0 80.9)"/><ellipse cx="180.3" cy="87.7" rx="5.2" ry="10.3" opacity="0.7" transform="rotate(57.0 180.3 87.7)"/><ellipse cx="187.1" cy="63.2" rx="5.2" ry="9.8" opacity="1" transform="rotate(1.0 187.1 63.2)"/><ellipse cx="172.6" cy="73.8" rx="5.2" ry="9.8" opacity="0.7" transform="rotate(71.0 172.6 73.8)"/><ellipse cx="173.4" cy="48.4" rx="5.2" ry="9.4" opacity="1" transform="rotate(15.0 173.4 48.4)"/><ellipse cx="161.8" cy="62.2" rx="5.2" ry="9.4" opacity="0.7" transform="rotate(85.0 161.8 62.2)"/></g>
+            <rect x="88" y="80" width="64" height="64" rx="10" fill="#002a54"/>
+            <path d="M108 104l-7 8 7 8M132 104l7 8-7 8M123 99l-6 26" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h1>Congratulations on finishing the Impact Builder Program!</h1>
+          <p class="sub">You built real tools for a real high-impact organization.</p>
+          <dl class="meta">
+            <div><dt>Issued</dt><dd>May 28, 2027</dd></div>
+            <div><dt>Certificate ID</dt><dd>IBP-2705-0142</dd></div>
+          </dl>
+          <div class="cert-actions">
+            <button class="btn btn-li btn-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg>Add to LinkedIn</button>
+            <button class="btn btn-ghost btn-sm btn-icon" aria-label="Copy link" title="Copy link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></svg></button>
+            <button class="btn btn-ghost btn-sm btn-icon" aria-label="Download PDF" title="Download PDF"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>
+          </div>
+        </div>
+        <div class="done-right">
+          <div class="mini-cert">
+            <svg class="badge-sm" viewBox="0 0 220 190" aria-hidden="true">
+              <path d="M54 12h112v88c0 40-28 66-56 78-28-12-56-38-56-78z" fill="#fff" stroke="#002a54" stroke-width="5"/>
+              <path d="M64 22h92v78c0 33-22 55-46 66-24-11-46-33-46-66z" fill="#f2f7fc"/>
+              <g transform="translate(83 36)">
+                <rect width="16" height="14" fill="#fff" stroke="#002a54" stroke-width="1.6"/>
+                <text x="8" y="10.4" text-anchor="middle" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="7.5" fill="#002a54">HIP</text>
+                <text x="21" y="6" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="5.6" fill="#002a54">HIGH IMPACT</text>
+                <text x="21" y="12.6" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="4.6" fill="#002a54">PROFESSIONALS</text>
+              </g>
+              <path d="M24 70h20l-8 13 8 13H24z" fill="#c9401a"/>
+              <path d="M196 70h-20l8 13-8 13h20z" fill="#c9401a"/>
+              <rect x="38" y="64" width="144" height="34" fill="#f4511e"/>
+              <text x="110" y="86.5" text-anchor="middle" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="12.5" letter-spacing=".6" fill="#fff">IMPACT BUILDER</text>
+              <circle cx="110" cy="124" r="10" fill="#002a54"/>
+              <path d="M105 124l3.5 3.5 6.5-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="110" y="148" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="9" letter-spacing="1.4" fill="#002a54">CERTIFIED</text>
+            </svg>
+            <div class="eyebrow">Professional Certificate</div>
+            <div class="mc-title">Impact Builder Program</div>
+            <div class="eyebrow mc-aw">Awarded to</div>
+            <div class="mc-name">Shahbano Imran</div>
+            <p class="mc-desc">Completed a 4-week, 20-hour cohort program: built tools in Claude Code and Lovable, and delivered a capstone for a high-impact organization.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 2. Next steps (most prominent) ===== -->
+      <section class="block">
+        <div class="sec-eyebrow">Your next steps</div>
+        <h2 class="sec-title">Put your new skills to work for impact</h2>
+        <p class="sec-sub">High-impact organizations are looking for people who can do the job <em>and</em> use AI well. You now have both, plus three projects to prove it.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="art">
+              <span class="num">01</span>
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5.6L20 8.3l-4.3 3.9 1.2 5.8L12 15.1 7.1 18l1.2-5.8L4 8.3l5.6-.7z"/></svg>
+            </div>
+            <div class="copy">
+              <h3>Apply to the Impact Accelerator Program <span class="tag">Recommended</span></h3>
+              <p>A 6-week program for experienced professionals to build a concrete plan for a higher-impact career and start acting on it, alongside peers making the same move.</p>
+              <div class="row"><button class="btn btn-orange">Apply to IAP</button><span class="note">6 weeks · 2–3 hours a week</span></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="art">
+              <span class="num">02</span>
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.8-3.2 3.1-5 6-5s5.2 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.4.1 4.2 1.7 5 4.3"/></svg>
+            </div>
+            <div class="copy">
+              <h3>Join the Talent Directory</h3>
+              <p>Get found by the high-impact organizations that recruit from HIP's directory. Your profile will carry an <strong>Impact Builder</strong> badge and links to your capstone.</p>
+              <div class="row"><button class="btn btn-orange">Add my profile</button><span class="note">Takes about 10 minutes</span></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="art">
+              <span class="num">03</span>
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/></svg>
+            </div>
+            <div class="copy">
+              <h3>Browse the Job Board</h3>
+              <p>Find open roles at high-impact organizations, including operations, data, and product roles where AI building skills stand out.</p>
+              <div class="row"><button class="btn btn-orange">Search jobs</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. Feedback survey (NPS) ===== -->
+      <section class="block">
+        <div class="sec-eyebrow">2-minute feedback</div>
+        <h2 class="sec-title">Help us improve the program</h2>
+        <p class="sec-sub">Your answers shape the next cohort's curriculum.</p>
+
+        <div class="survey">
+          <label class="q">How likely are you to recommend the Impact Builder Program to a friend or colleague?</label>
+          <div class="nps" role="radiogroup">
+            <input type="radio" name="nps" id="n0"><label for="n0">0</label>
+            <input type="radio" name="nps" id="n1"><label for="n1">1</label>
+            <input type="radio" name="nps" id="n2"><label for="n2">2</label>
+            <input type="radio" name="nps" id="n3"><label for="n3">3</label>
+            <input type="radio" name="nps" id="n4"><label for="n4">4</label>
+            <input type="radio" name="nps" id="n5"><label for="n5">5</label>
+            <input type="radio" name="nps" id="n6"><label for="n6">6</label>
+            <input type="radio" name="nps" id="n7"><label for="n7">7</label>
+            <input type="radio" name="nps" id="n8"><label for="n8">8</label>
+            <input type="radio" name="nps" id="n9"><label for="n9">9</label>
+            <input type="radio" name="nps" id="n10"><label for="n10">10</label>
+          </div>
+          <div class="nps-scale"><span>Not at all likely</span><span>Extremely likely</span></div>
+
+          <label class="q mt" for="fb">What was the most useful part, and what should we change?</label>
+          <textarea id="fb" placeholder="e.g. The capstone was the highlight. Week 3 felt rushed…"></textarea>
+
+          <div class="foot">
+            <small>We'll also check in at 30 and 90 days to hear how it's going.</small>
+            <button class="btn btn-orange">Submit feedback</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 4. Refer ===== -->
+      <section class="refer">
+        <div class="sec-eyebrow">Pass it on</div>
+        <h2>Help more people turn their careers into a force for good</h2>
+        <p>You know professionals who'd thrive doing high-impact work. A post or a personal note from you is the best way they'll hear about it.</p>
+
+        <div class="refer-card">
+          <div class="l">
+            <h3>1. Share with your network</h3>
+            <p>Celebrate what you built and let your network know about the program.</p>
+            <div class="btns">
+              <button class="btn btn-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg>Share on LinkedIn</button>
+            </div>
+          </div>
+          <div class="r">
+            <div class="preview-lbl">Post preview</div>
+            <div class="post-head"><span class="pa"></span><span class="lines" style="width:120px"><span></span><span></span></span></div>
+            <p class="post-text">I just finished the Impact Builder Program from High Impact Professionals! In 4 weeks I built AI tools for a real high-impact org…</p>
+            <div class="post-img">
+              <span class="mini-logo" style="color:#fff"><span class="m" style="border-color:#fff">HIP</span><span>HIGH IMPACT<br>PROFESSIONALS</span></span>
+              <div class="pt">Impact Builder Program</div>
+              <div class="ps">Learn to build with AI. Put it to work for impact.</div>
+              <span class="pb">Apply now</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="refer-card">
+          <div class="l">
+            <h3>2. Refer a friend or colleague</h3>
+            <p>Think of three people who'd benefit from the next cohort or from HIP's network. A little "I thought of you" goes a long way.</p>
+            <div class="btns">
+              <button class="btn btn-orange"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 011-1h9"/></svg>Copy message</button>
+              <button class="btn btn-ghost">Send an invite by email</button>
+            </div>
+          </div>
+          <div class="r">
+            <div class="bubble">
+              Hey, I just finished HIP's Impact Builder Program. I learned to build real AI tools and used them on a project for a high-impact nonprofit. I thought of you, and the next cohort starts soon:
+              <u>highimpactprofessionals.org/impact-builder</u>
+              <span class="time">14:32</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <span class="logo">
+          <span class="logo-mark">HIP</span>
+          <span class="logo-text"><span class="l1">HIGH IMPACT</span><span class="l2">PROFESSIONALS</span></span>
+        </span>
+        <p class="tagline">High Impact Professionals is a non-profit enabling professionals to maximize their positive impact.</p>
+      </div>
+      <div class="links">
+        <h4>Quick Links</h4>
+        <span>Impact Accelerator Program</span><span>Pledge Club</span>
+        <span>Talent Directory</span><span>Free Resources</span>
+        <span>Job Board</span><span>About Us</span>
+      </div>
+    </div>
+    <div class="bottom">© 2027 by High Impact Professionals · Privacy Policy · Terms of Use</div>
+  </div>
+</footer>
+
+</body>
+</html>
