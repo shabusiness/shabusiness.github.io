@@ -9,6 +9,7 @@
   <meta name="googlebot" content="noindex, nofollow, noimageindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cal+Sans&amp;family=Libre+Baskerville:ital@1&amp;family=DM+Sans:wght@400;500;600;800&amp;family=Caveat:wght@600&amp;display=swap">
+  <link rel="stylesheet" href="/texture.css">
   <style>
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -18,12 +19,14 @@
     a:focus-visible { outline: 2px solid #3A2420; outline-offset: 3px; border-radius: 999px; }
     .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin: 0; }
     .wrap { max-width: 1120px; margin: 0 auto; width: 100%; }
-    .anchor { display: block; position: relative; top: -120px; height: 0; visibility: hidden; }
+    .anchor { display: block; position: relative; top: -40px; height: 0; visibility: hidden; }
     .band { width: 100%; padding: 0 clamp(20px,5vw,48px) clamp(40px,6vw,64px); }
     .band > .wrap { border-top: 1px solid rgba(58,36,32,.14); padding-top: clamp(36px,5vw,56px); }
     .pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; min-height: 44px; border-radius: 999px; font-weight: 600; font-size: 16px; transition: background .15s ease, color .15s ease; }
-    .pill-soft { background: #E2DAD0; }
+    .pill-soft { background: rgba(226,218,208,.8); }
     .pill-soft:hover { background: #C61E34; color: #FFFFFF; }
+    .pill-ghost { box-sizing: border-box; background: transparent; border: 1.5px solid #3A2420; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+    .pill-ghost:hover { background: #C61E34; border-color: #C61E34; color: #FFFFFF; }
     .pill-dark { background: #3A2420; color: #F4EEEC; }
     .pill-dark:hover { background: #C61E34; color: #FFFFFF; }
     .jump { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #C61E34; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; transition: color .15s ease; }
@@ -32,7 +35,7 @@
     .jump:hover svg { transform: translateY(2px); }
     .inline-link { color: #C61E34; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
     .hero-band { padding: clamp(24px,3vw,40px) clamp(20px,5vw,48px) clamp(36px,5vw,56px); }
-    .hero-card { background: #E6E0D8; border-radius: 28px; padding: clamp(28px,4vw,52px); display: flex; align-items: center; gap: clamp(24px,4vw,48px); flex-wrap: wrap; text-align: left; }
+    .hero-card { background: rgba(230,224,216,.7); border-radius: 28px; padding: clamp(28px,4vw,52px); display: flex; align-items: center; gap: clamp(24px,4vw,48px); flex-wrap: wrap; text-align: left; }
     .fw { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 10px 12px; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(58,36,32,.18); }
     .fw .eyebrow { flex-basis: 100%; margin-bottom: 2px; }
     .fw .jump { background: #EEEAE4; color: #3A2420; text-decoration: none; font-size: 15px; padding: 0 18px; min-height: 44px; border-radius: 999px; }
@@ -50,7 +53,7 @@
     .meta strong { font-weight: 800; letter-spacing: 0.01em; }
     .meta .sep { width: 5px; height: 5px; border-radius: 999px; background: #C61E34; align-self: center; flex-shrink: 0; }
     .facts { display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px; margin: 28px 0 36px; }
-    .facts .fact { flex: 0 1 auto; max-width: 100%; background: #E6E0D8; border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .facts .fact { flex: 0 1 auto; max-width: 100%; background: rgba(230,224,216,.75); border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
     .facts .fact-link { background: #3A2420; color: #F4EEEC; transition: background .15s ease, color .15s ease; }
     .facts .fact-link:hover { background: #C61E34; color: #FFFFFF; }
     .facts .fact-link .lbl { opacity: .78; }
@@ -61,7 +64,7 @@
     .case-top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 14px; }
     .date { display: inline-flex; align-items: center; min-height: 32px; padding: 0 16px; border-radius: 999px; background: #3A2420; color: #F4EEEC; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
-    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: #E2DAD0; font-size: 13.5px; font-weight: 600; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: rgba(226,218,208,.8); font-size: 13.5px; font-weight: 600; }
     .hero2 { display: grid; grid-template-columns: minmax(0,6fr) minmax(0,5fr); gap: clamp(32px,5vw,64px); align-items: center; }
     .section { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: clamp(24px,4vw,48px); }
     .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 28px 0 36px; }
@@ -71,7 +74,7 @@
     .copy h3 { font-size: 16px; margin-bottom: 6px; }
     .copy p { margin: 0 0 22px; font-size: 14.5px; line-height: 1.6; }
     .dolist { margin: 0 0 22px; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; }
-    .why { margin-top: 4px; padding: 20px 22px; background: #E6E0D8; border-radius: 18px; }
+    .why { margin-top: 4px; padding: 20px 22px; background: rgba(230,224,216,.75); border-radius: 18px; }
     .why p { margin: 0; font-size: 14.5px; line-height: 1.65; }
     .todo { background: rgba(198,30,52,.09); border-radius: 4px; padding: 0 4px; }
     .ph { aspect-ratio: 16 / 10; background: #E2DAD0; border: 1px dashed rgba(58,36,32,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 20px; text-align: center; }
@@ -161,17 +164,17 @@
 </head>
 <body>
 
-<div style="width: 100%;">
+<div class="tex" style="width: 100%;">
   <span id="top" style="display: block; height: 0;"></span>
 
   <!-- NAV (page is not linked from the main menu) -->
-  <header style="position: sticky; top: 0; z-index: 30; background: rgba(238,234,228,.92); backdrop-filter: blur(10px); padding: 32px clamp(20px,5vw,48px) 14px;">
+  <header style="position: relative; z-index: 30; padding: 32px clamp(20px,5vw,48px) 14px;">
     <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
       <a href="/" aria-label="Founding Myth home" style="display: flex;">
         <img src="../images/logo.png" alt="Founding Myth" style="height: 41px; width: 95px; display: block">
       </a>
       <nav style="display: flex; align-items: center; gap: 28px;" aria-label="Main">
-        <a href="https://calendly.com/shahbanoi" target="_blank" rel="noopener noreferrer" class="pill pill-soft" style="padding: 10px 20px; min-height: 42px; font-size: 15px;">Book a call</a>
+        <a href="https://calendly.com/shahbanoi" target="_blank" rel="noopener noreferrer" class="pill pill-ghost" style="padding: 10px 20px; min-height: 42px; font-size: 15px;">Book a call</a>
       </nav>
     </div>
   </header>
